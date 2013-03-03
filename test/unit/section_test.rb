@@ -17,4 +17,9 @@ class SectionTest < ActiveSupport::TestCase
 		end
 	end
 
+	test "'position' is required" do
+		assert_raises ActiveRecord::RecordInvalid do
+			Section.create! :name => 'Test'
+		end
+	end
 end
