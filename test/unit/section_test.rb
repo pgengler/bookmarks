@@ -8,4 +8,13 @@ class SectionTest < ActiveSupport::TestCase
 		end
 	end
 
+	test "'name' is unique" do
+		name = 'Dummy'
+
+		Section.create! :name => name, :position => 1
+		assert_raises ActiveRecord::RecordInvalid do
+			Section.create! :name => name, :position => 1
+		end
+	end
+
 end
