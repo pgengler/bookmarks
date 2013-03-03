@@ -14,8 +14,8 @@ test:
   encoding: unicode
   database: bookmarks_test
   pool: 5
-  username: bookmarks
-  password: bookmarks
+  username: rails
+  password: rails
 
 production:
   adapter: postgresql
