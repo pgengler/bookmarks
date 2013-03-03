@@ -11,9 +11,9 @@ class SectionTest < ActiveSupport::TestCase
 	test "'name' is unique" do
 		name = 'Dummy'
 
-		Section.create! :name => name, :position => 1
+		Section.create! :name => name, :position => next_position
 		assert_raises ActiveRecord::RecordInvalid do
-			Section.create! :name => name, :position => 1
+			Section.create! :name => name, :position => next_position
 		end
 	end
 
@@ -21,5 +21,17 @@ class SectionTest < ActiveSupport::TestCase
 		assert_raises ActiveRecord::RecordInvalid do
 			Section.create! :name => 'Test'
 		end
+	end
+
+	test "'position' is unique" do
+		position = next_position
+		Section.create! :name => 'Section1', :position => position
+		assert_raises ActiveRecord::RecordInvalid do
+			Section.create! :name => 'Section2', :position => position
+		end
+	end
+
+	def next_position
+		Section.all.map(&:position).max + 1
 	end
 end

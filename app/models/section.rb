@@ -2,5 +2,5 @@ class Section < ActiveRecord::Base
   attr_accessible :position, :name
 
 	validates :name, :presence => true, :uniqueness => true
-	validates :position, :presence => true
+	validates :position, :presence => true, :uniqueness => true
 end
