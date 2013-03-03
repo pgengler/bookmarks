@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+	test "'name' is required" do
+		assert_raises ActiveRecord::RecordInvalid do
+			Section.create! :position => 1
+		end
+	end
+
 end
