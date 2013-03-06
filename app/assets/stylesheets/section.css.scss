@@ -1,3 +1,22 @@
 // Place all the styles related to the Section controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+section {
+	display: inline-block;
+	margin-bottom: .25em;
+	vertical-align: top;
+	width: 32%;
+
+	header {
+		background-color: #E9E9E9;
+		border: 1px solid #AAA;
+		display: block;
+		font-size: 110%;
+		font-weight: bold;
+		font-variant: small-caps;
+		padding-bottom: .25em;
+		padding-top: .25em;
+		text-align: center;
+	}
+}
