@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
+first:
+  name: First Section
   position: 1
 
-two:
-  name: MyString
+empty:
+  name: Empty Section
   position: 2

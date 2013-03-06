@@ -3,9 +3,9 @@
 one:
   title: MyString
   url: MyString
-  section: one
+  section: first
 
 two:
   title: MyString
   url: MyString
-  section: one
+  section: first
