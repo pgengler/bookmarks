@@ -11,4 +11,13 @@ class SectionsControllerTest < ActionController::TestCase
 
 		assert_select 'section', Section.count
 	end
+
+	test "a section's links are included in the page" do
+		get :index
+
+		section = sections(:first)
+		assert_select "section[data-id=#{section.id}]" do
+			assert_select 'a', section.links.count
+		end
+	end
 end
