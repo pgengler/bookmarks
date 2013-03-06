@@ -1,5 +1,5 @@
 Bookmarks::Application.routes.draw do
 	resources :sections
 
-	root :to => 'section#index'
+	root :to => 'sections#index'
 end
