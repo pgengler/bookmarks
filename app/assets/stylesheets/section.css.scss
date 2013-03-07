@@ -4,7 +4,6 @@
 
 section {
 	display: inline-block;
-	margin-bottom: .25em;
 	vertical-align: top;
 	width: 32%;
 
@@ -18,5 +17,13 @@ section {
 		padding-bottom: .25em;
 		padding-top: .25em;
 		text-align: center;
+	}
+
+	ul {
+		border: 1px dotted gray;
+		margin-bottom: 2px;
+		margin-top: 2px;
+		min-height: 1em;
+		padding-left: 1.5em;
 	}
 }
