@@ -4,4 +4,8 @@ class SectionsController < ApplicationController
 		@sections = Section.all
 	end
 
+	def edit
+		@section = Section.find(params[:id])
+	end
+
 end

@@ -20,4 +20,9 @@ class SectionsControllerTest < ActionController::TestCase
 			assert_select 'a', section.links.count
 		end
 	end
+
+	test "has edit action" do
+		get :edit, :id => sections(:first).id
+		assert_response :success
+	end
 end
