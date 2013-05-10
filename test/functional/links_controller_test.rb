@@ -6,4 +6,10 @@ class LinksControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+	test "'create' action creates new link" do
+		assert_difference('Link.count') do
+			post :create, link: { title: 'Dummy', url: 'http://example.com', section_id: sections(:first).id }
+		end
+	end
+
 end
