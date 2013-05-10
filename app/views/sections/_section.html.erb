@@ -1,5 +1,7 @@
 <section data-id="<%= section.id %>">
-	<header><%= section.name %></header>
+	<header>
+		<%= link_to section.name, edit_section_path(section) %>
+	</header>
 	<ul>
 		<%= render section.links %>
 	</ul>

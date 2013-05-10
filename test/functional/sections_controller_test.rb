@@ -16,7 +16,7 @@ class SectionsControllerTest < ActionController::TestCase
 		get :index
 
 		section = sections(:first)
-		assert_select "section[data-id=#{section.id}]" do
+		assert_select "section[data-id=#{section.id}] ul" do
 			assert_select 'a', section.links.count
 		end
 	end
@@ -24,5 +24,14 @@ class SectionsControllerTest < ActionController::TestCase
 	test "has edit action" do
 		get :edit, :id => sections(:first).id
 		assert_response :success
+	end
+
+	test "a section's header has a link to its 'edit section' page" do
+		get :index
+
+		section = sections(:first)
+		assert_select "section[data-id=#{section.id}] header" do
+			assert_select "a[href=#{edit_section_path(section)}]"
+		end
 	end
 end
