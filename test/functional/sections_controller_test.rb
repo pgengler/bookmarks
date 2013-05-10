@@ -22,7 +22,7 @@ class SectionsControllerTest < ActionController::TestCase
 	end
 
 	test "has edit action" do
-		get :edit, :id => sections(:first).id
+		get :edit, id: sections(:first).id
 		assert_response :success
 	end
 
