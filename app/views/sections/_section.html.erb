@@ -1,7 +1,7 @@
 <section data-id="<%= section.id %>">
 	<header>
 		<%= link_to section.name, edit_section_path(section) %>
-		<%= link_to 'Add link', new_section_link_path(section) %>
+		<%= link_to '+', new_section_link_path(section), class: 'add' %>
 	</header>
 	<ul>
 		<%= render section.links %>
