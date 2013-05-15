@@ -18,4 +18,10 @@ class LinksControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
+	test "'update' action changes a link's title and URL" do
+		link = links(:one)
+		put :update, section_id: link.section.id, id: link.id, link: { title: 'UpdateActionTestTitle', url: 'http://example.com/?UpdateActionTestURL' }
+		assert_redirected_to root_path
+	end
+
 end
