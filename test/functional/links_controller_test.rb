@@ -12,4 +12,10 @@ class LinksControllerTest < ActionController::TestCase
 		end
 	end
 
+	test "has 'edit' action" do
+		link = links(:one)
+		get :edit, section_id: link.section, id: link
+		assert_response :success
+	end
+
 end
