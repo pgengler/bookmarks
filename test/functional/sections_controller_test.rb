@@ -17,7 +17,7 @@ class SectionsControllerTest < ActionController::TestCase
 
 		section = sections(:first)
 		assert_select "section[data-id=#{section.id}] ul" do
-			assert_select 'a', section.links.count
+			assert_select 'a[rel=external]', section.links.count
 		end
 	end
 

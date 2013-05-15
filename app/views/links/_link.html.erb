@@ -1,3 +1,4 @@
 <li>
-	<a href="<%= link.url %>" title="<%= link.url %>"><%= link.title %></a>
+	<a href="<%= link.url %>" title="<%= link.url %>" rel="external"><%= link.title %></a>
+	<%= link_to 'Edit', edit_section_link_path(link.section, link) %>
 </li>
