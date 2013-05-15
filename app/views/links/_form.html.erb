@@ -1,12 +1,9 @@
-<%= form_for(@link) do |f| %>
+<%= form_for [ @section, @link ] do |f| %>
 	<%= f.label :title %>
 	<%= f.text_field :title %>
 	<br>
 	<%= f.label :url, 'URL' %>
 	<%= f.text_field :url %>
-	<br>
-	<%= f.label :section %>
-	<%= f.collection_select :section_id, Section.all, :id, :name %>
 	<br>
 	<%= f.submit %>
 <% end %>
