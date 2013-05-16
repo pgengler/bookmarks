@@ -34,4 +34,9 @@ class SectionsControllerTest < ActionController::TestCase
 			assert_select "a[href=#{edit_section_path(section)}]"
 		end
 	end
+
+	test "has 'new' action" do
+		get :new
+		assert_response :success
+	end
 end

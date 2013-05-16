@@ -1,9 +1,2 @@
 <h1>Edit section "<%= @section.name %>"</h1>
-<%= form_for @section do |f| %>
-	<label>
-		Name:
-		<%= f.text_field :name %>
-	</label>
-	<br>
-	<%= f.submit %>
-<% end %>
+<%= render 'form' %>

@@ -8,4 +8,8 @@ class SectionsController < ApplicationController
 		@section = Section.find(params[:id])
 	end
 
+	def new
+		@section = Section.new
+	end
+
 end
