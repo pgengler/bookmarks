@@ -1,4 +1,5 @@
 <li>
 	<a href="<%= link.url %>" title="<%= link.url %>" rel="external"><%= link.title %></a>
 	<%= link_to 'Edit', edit_section_link_path(link.section, link) %>
+	<%= link_to 'Delete', section_link_path(link.section, link), method: :delete, confirm: 'Really delete this link?' %>
 </li>

@@ -20,6 +20,12 @@ class LinksController < ApplicationController
 		redirect_to root_path
 	end
 
+	def destroy
+		@link = @section.links.find(params[:id])
+		@link.destroy
+		redirect_to root_path
+	end
+
 	private
 
 	def lookup_section

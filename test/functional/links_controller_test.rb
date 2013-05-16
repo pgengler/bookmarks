@@ -24,4 +24,11 @@ class LinksControllerTest < ActionController::TestCase
 		assert_redirected_to root_path
 	end
 
+	test "'destroy' action removes link" do
+		link = links(:one)
+		assert_difference('Link.count', -1) do
+			delete :destroy, section_id: link.section.id, id: link.id
+		end
+	end
+
 end
